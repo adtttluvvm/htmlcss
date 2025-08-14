@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        line-height: 1.5;
+        color: #e0e0e0;
+        background-color: #121212;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid #333;
+        background: #1e1e1e;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .brand img {
+        max-width: 50px;
+        height: auto;
+        border-radius: 10%;
+        filter: invert(1);
+      }
+      .brand h1 {
+        font-size: 1.2rem;
+        font-weight: 900;
+        line-height: 1.2;
+        color: #fff;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+      .nav-link {
+        text-decoration: none;
+        color: #ccc;
+        position: relative;
+        padding-bottom: 4px;
+        transition: all 0.3s ease;
+      }
+      .nav-link:hover {
+        color: #fabe19;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background: #fabe19;
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .nav-link.active {
+        color: #fabe19;
+      }
+      .nav-link.active::after {
+        width: 100%;
+        background: #fabe19;
+      }
+
+      .self {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        min-height: calc(100vh - 80px);
+        padding: 2rem;
+        background: #121212;
+      }
+      .foto img {
+        border-radius: 30%;
+        border: 5px solid #fabe19;
+        max-width: 300px;
+        height: auto;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .foto img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(250, 190, 25, 0.4);
+      }
+
+      .welcome {
+        max-width: 500px;
+      }
+      .welcome h2 {
+        font-size: 2.5rem;
+        text-align: center;
+      }
+      .name1 {
+        color: #4da6ff;
+      }
+      .name2 {
+        color: #fabe19;
+        margin-bottom: 10px;
+      }
+      .welcome p {
+        font-size: 1rem;
+        color: #ccc;
+        text-align: justify;
+      }
+
+      @media (max-width: 768px) {
+        nav ul {
+          gap: 1rem;
+        }
+        .welcome {
+          text-align: center;
+        }
+        .welcome h2 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <img src="./assets/logo.png" alt="Logo Adtt Skzk" />
+        <h1>Adtt Skzk</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" class="nav-link active">Home</a></li>
+          <li><a href="./about.html" class="nav-link">About</a></li>
+          <li><a href="./kontak.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="self">
+      <div class="foto">
+        <img src="./assets/me.jpg" alt="Foto Aditya Nurdiansyah" />
+      </div>
+      <div class="welcome">
+        <h2 class="name1">Aditya</h2>
+        <h2 class="name2">Nurdiansyah</h2>
+        <p>
+          Aku adalah seorang pelajar yang sekarang sedang mendalami dunia
+          pemrograman. Aku mempunyai tujuan untuk menjadi fullstack developer
+          kedepannya.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
